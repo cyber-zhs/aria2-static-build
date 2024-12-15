@@ -454,7 +454,7 @@ build_aria2() {
   # else
   #   ARIA2_EXT_CONF='--with-ca-bundle=/etc/ssl/certs/ca-certificates.crt'
   fi
-  ./configure --host="${CROSS_HOST}" --prefix="${CROSS_PREFIX}" --enable-static --disable-shared --enable-silent-rules ARIA2_STATIC=yes ${ARIA2_EXT_CONF}
+  ./configure --host="${CROSS_HOST}" --prefix="${CROSS_PREFIX}" --enable-static --disable-shared --enable-libaria2 --enable-silent-rules ARIA2_STATIC=yes ${ARIA2_EXT_CONF}
   make -j$(nproc)
   make install
   echo "- aria2: source: ${aria2_latest_url:-cached aria2}" >>"${BUILD_INFO}"
@@ -497,4 +497,6 @@ get_build_info
 # test_build
 
 # get release
+ls "${CROSS_PREFIX}/bin/"aria2*
 cp -fv "${CROSS_PREFIX}/bin/"aria2* "${SELF_DIR}"
+cp -fv "${CROSS_PREFIX}/lib/"libaria2* "${SELF_DIR}"
