@@ -91,7 +91,7 @@ jobs:
             ARCHIVE_NAME="aria2-${CROSS_HOST//-unknown/}_static.zip"
           fi
           echo "ARCHIVE_NAME=${ARCHIVE_NAME}" >> $GITHUB_ENV
-          zip -j9v "/tmp/${ARCHIVE_NAME}" "${GITHUB_WORKSPACE}"/aria2c*
+          zip -j9v "/tmp/${ARCHIVE_NAME}" "${GITHUB_WORKSPACE}"/*aria2*
         shell: bash
       - name: Prerelease assets
         if: github.event_name == 'push' || github.event_name == 'schedule'
