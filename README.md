@@ -2,7 +2,7 @@
 
 ![Build and Release](https://github.com/abcfy2/aria2-static-build/actions/workflows/build_and_release.yml/badge.svg)
 
-aria2 static build using musl and support many platforms.
+aria2 static build using musl and support many platforms. test
 
 ## Download
 
