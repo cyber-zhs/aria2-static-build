@@ -45,14 +45,14 @@ jobs:
       fail-fast: false
       matrix:
         cross_host:
-          - arm-unknown-linux-musleabi
-          - aarch64-unknown-linux-musl
-          - mips-unknown-linux-musl
-          - mipsel-unknown-linux-musl
-          - mips64-unknown-linux-musl
+          # - arm-unknown-linux-musleabi
+          # - aarch64-unknown-linux-musl
+          # - mips-unknown-linux-musl
+          # - mipsel-unknown-linux-musl
+          # - mips64-unknown-linux-musl
           - x86_64-unknown-linux-musl
           - x86_64-w64-mingw32
-          - i686-w64-mingw32
+          # - i686-w64-mingw32
         # use_libressl: [0, 1]
         # exclude:
         #   - cross_host: x86_64-w64-mingw32
